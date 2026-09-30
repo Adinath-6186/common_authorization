@@ -1,0 +1,13 @@
+name: common_authorization_example
+description: Example integration for common_authorization.
+publish_to: none
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  common_authorization:
+    path: ..
