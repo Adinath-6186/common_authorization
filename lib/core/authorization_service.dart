@@ -1,6 +1,7 @@
 import '../models/app_user.dart';
 import '../models/authorization_state.dart';
 import '../models/permission_override.dart';
+import '../mappers/authorization_mapper.dart';
 
 class AuthorizationService {
   AuthorizationState _state = const AuthorizationState();
@@ -11,6 +12,12 @@ class AuthorizationService {
   Set<String> get permissions => Set.unmodifiable(_state.permissions);
   Set<String> get roles => Set.unmodifiable(_state.roles);
 
+
+  void setMappedUser<T>(T response, AuthorizationMapper<T> mapper) {
+    final user = mapper.mapUser(response);
+    setUser(user);
+  }
+  
   void setUser(AppUser user) {
     final permissionSet = user.permissions.map((e) => e.code).toSet();
 
