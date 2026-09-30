@@ -55,7 +55,7 @@ Or use a Git repository:
 dependencies:
   common_authorization:
     git:
-      url: git@github.com:your-company/common_authorization.git
+      url: https://github.com/Adinath-6186/common_authorization.git
       ref: v1.0.0
 ```
 
