@@ -1,5 +1,8 @@
 library common_authorization;
 
+export 'mappers/authorization_mapper.dart';
+
+export 'models/authorization_context.dart';
 export 'models/app_permission.dart';
 export 'models/app_role.dart';
 export 'models/app_user.dart';
